@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    public class Computer : ISold, IDamaged
+    public class Computer : IDamaged
     {
         public static double incomeFromPCs;
         public double SellPrice { get; set; }
@@ -16,14 +16,18 @@ namespace Interfaces
         public void Fix()
         {
             double cost = BuyingPrice * 0.15;
-            Console.WriteLine("omputer is fixed.\nFixing cost: {0}$", cost);
+            Console.WriteLine("Computer is fixed.\nFixing cost: {0}$", cost);
             incomeFromPCs = incomeFromPCs - cost;
+            Fixed = true;
         }
 
         public  void Sell(object computer)
         {
-
-            SellPrice = BuyingPrice * 1.5;
+            if (Fixed == false)
+            {
+                Console.WriteLine("Computer can't be sold, becouse it's not fixed!");
+                return;
+            }            
             Console.WriteLine("Computer is sold for {0}", SellPrice);
             incomeFromPCs = incomeFromPCs + SellPrice;
             computer = null;
@@ -32,13 +36,14 @@ namespace Interfaces
         public Computer(double buyingPrice)
         {
             BuyingPrice = buyingPrice;
-            BuyComputer();
+            Buy();
+            SellPrice = BuyingPrice * 1.4;
         }
         public Computer( double buyingPrice, bool fix):this( buyingPrice)
         {
             Fixed = fix;
         }
-        public double BuyComputer()
+        public double Buy()
         {
             return incomeFromPCs = incomeFromPCs - BuyingPrice;
         }

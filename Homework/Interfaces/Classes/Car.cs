@@ -14,9 +14,7 @@ namespace Interfaces
         public double BuyingPrice { get; set; }
 
         public void Sell(object car)
-        {
-
-            SellPrice = BuyingPrice * 1.2;
+        {           
             Console.WriteLine("Car is sold for {0}", SellPrice);
             incomeFromCars = incomeFromCars + SellPrice;
             car = null;
@@ -25,6 +23,7 @@ namespace Interfaces
         {
             Model = model;
             BuyingPrice = buyingPrice;
+            SellPrice = BuyingPrice * 1.2;
         }
         public double TrowInTrash(object car)
         {
@@ -33,6 +32,10 @@ namespace Interfaces
             car = null;
             return incomeFromCars = incomeFromCars + incomeFromScrap;
         }
-       
+        public double Buy()
+        {
+            return incomeFromCars = incomeFromCars - BuyingPrice;
+        }
+
     }
 }

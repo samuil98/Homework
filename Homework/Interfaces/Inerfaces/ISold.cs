@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    interface ISold
+    interface ISold : IBuy
     {
          double  SellPrice { get; set; }
-        public abstract void Sell(object objekt);
+        public  void Sell(object objekt);
     }
 }

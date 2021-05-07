@@ -8,32 +8,33 @@ namespace Interfaces
         
         static void Main(string[] args)
         {
-            var newArticles = new List<Computer>();
-            newArticles.Add(new Computer(1000));
+            var newArticles = new List<ISold>();
+            newArticles.Add(new Car("golf",2000));
             newArticles.Add(new Computer(800,true));
-            foreach (var computer in newArticles)
+            foreach (var article in newArticles)
             {
-                Console.WriteLine("Computer is bought fo {0}", computer.BuyingPrice);
-                computer.Sell(computer);
-            }
-            newArticles[0].Sell(newArticles[0]);
-
-            var demagedPhones = new List<Samrphone>();
-            demagedPhones.Add(new Samrphone("Nokia",600));
-            demagedPhones.Add(new Samrphone("Samsung", 750));
-            foreach (var phone in demagedPhones)
-            {
-                phone.Fix();
-                phone.Sell(phone);
+                article.Sell(article);
             }
 
-            var brokenCars = new List<Car>();
-            brokenCars.Add(new Car("Jigula", 800));
-            brokenCars.Add(new Car("Lada", 600));
-            foreach (var car in brokenCars)
+            var demagedArticles = new List<IDamaged>();
+            demagedArticles.Add(new Samrphone("Nokia",600));
+            demagedArticles.Add(new Computer(750));
+
+            foreach (var article in demagedArticles)
             {
-                car.TrowInTrash(car);
+                article.Sell(article);
+                article.Fix();
+                article.Sell(article);
             }
+            
+            var brokenArticles = new List<IBroken>();
+            brokenArticles.Add(new Samrphone("Samsung", 800));
+            brokenArticles.Add(new Car("Lada", 800));
+            foreach (var article in brokenArticles)
+            {
+                article.TrowInTrash(article);
+            }
+
             GetTotalIncome();
         }
 
