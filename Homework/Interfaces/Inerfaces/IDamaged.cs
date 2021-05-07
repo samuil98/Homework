@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    interface IDamaged
+    interface IDamaged : ISold
     {
         bool Fixed { get; set; }
         void Fix();

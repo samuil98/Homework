@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samuil\\Desktop\\Homework\\AbstractClass\\AbstractClass.csproj": {}
+    "C:\\Users\\samuil\\Source\\Repos\\Homework\\Homework\\AbstractClass\\AbstractClass.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samuil\\Desktop\\Homework\\AbstractClass\\AbstractClass.csproj": {
+    "C:\\Users\\samuil\\Source\\Repos\\Homework\\Homework\\AbstractClass\\AbstractClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samuil\\Desktop\\Homework\\AbstractClass\\AbstractClass.csproj",
+        "projectUniqueName": "C:\\Users\\samuil\\Source\\Repos\\Homework\\Homework\\AbstractClass\\AbstractClass.csproj",
         "projectName": "AbstractClass",
-        "projectPath": "C:\\Users\\samuil\\Desktop\\Homework\\AbstractClass\\AbstractClass.csproj",
+        "projectPath": "C:\\Users\\samuil\\Source\\Repos\\Homework\\Homework\\AbstractClass\\AbstractClass.csproj",
         "packagesPath": "C:\\Users\\samuil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samuil\\Desktop\\Homework\\AbstractClass\\obj\\",
+        "outputPath": "C:\\Users\\samuil\\Source\\Repos\\Homework\\Homework\\AbstractClass\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\samuil\\AppData\\Roaming\\NuGet\\NuGet.Config",
